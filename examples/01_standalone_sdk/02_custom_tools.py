@@ -1,6 +1,10 @@
 """Advanced example showing explicit executor usage and custom grep tool."""
 
 import os
+from dotenv import load_dotenv
+
+load_dotenv(".env")
+
 import shlex
 from collections.abc import Sequence
 

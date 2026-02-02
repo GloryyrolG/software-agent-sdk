@@ -211,3 +211,5 @@ agent-sdk.workspace.code-workspace
 
 # Integration test outputs
 tests/integration/outputs/
+openhands_gui_workspace
+third_parties/
