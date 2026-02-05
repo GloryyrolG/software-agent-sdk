@@ -27,10 +27,14 @@ llm = LLM(
     # base_url="http://172.25.110.167:8881/llm/endor-text-qwen3-235b-latest/v1",
     # base_url="http://localhost:8881/llm/endor-text-qwen3-235b-latest/v1",
 
-    model="openai/gemini-2.5-pro",
-    base_url="http://17.87.107.226:8881/llm/gemini-2.5-pro/v1",
+    # model="openai/gemini-2.5-pro",
+    # base_url="http://17.87.107.226:8881/llm/gemini-2.5-pro/v1",
 
-    api_key="any",
+    # api_key="any",
+
+    model="openai/gpt-5-2025-08-07",
+    api_key=input("Please enter your OpenAI API key: "),
+
     # reasoning_effort="high",
 )
 
@@ -46,7 +50,10 @@ agent = Agent(
 cwd = os.getcwd()
 conversation = Conversation(agent=agent, workspace=cwd)
 
-# conversation.send_message("Write 3 facts about the current project into FACTS.txt.")
+conversation.send_message("Write 3 facts about the current project into FACTS.txt.")
+conversation.run()
+exit(0)
+
 prompt = "What llm model are you using? Please give its specific version and trained by which company. "
 # prompt += "然后 请你帮我构建一个app，要求是：经销商上传表格信息，AI自动化处理汇总后，将结果在前端展示出来"
 prompt += """

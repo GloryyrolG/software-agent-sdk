@@ -210,6 +210,7 @@ openapi.json
 agent-sdk.workspace.code-workspace
 
 # Integration test outputs
+FACTS.txt
 tests/integration/outputs/
-openhands_gui_workspace
 third_parties/
+openhands_gui_workspace
